@@ -1,0 +1,25 @@
+\hypertarget{modAlphaChiper_8h_source}{}\doxysection{mod\+Alpha\+Chiper.\+h}
+\mbox{\hyperlink{modAlphaChiper_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <locale>}}
+\DoxyCodeLine{15 \textcolor{keyword}{class }\mbox{\hyperlink{classmodAlphaCipher}{modAlphaCipher}}}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17 \textcolor{keyword}{private}:}
+\DoxyCodeLine{18     std::wstring numAlpha =L\textcolor{stringliteral}{"{}АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ"{}}; \textcolor{comment}{//алфавит по порядку}}
+\DoxyCodeLine{19     std::map <char,int> alphaNum; \textcolor{comment}{//ассоциативный массив "{}номер по символу"{}}}
+\DoxyCodeLine{20     std::vector <int> key; \textcolor{comment}{//ключ}}
+\DoxyCodeLine{21     std::vector<int> convert(\textcolor{keyword}{const} std::wstring\& s);\textcolor{comment}{//преобразование строка-\/вектор}}
+\DoxyCodeLine{22     std::wstring convert(\textcolor{keyword}{const} std::vector<int>\& v);\textcolor{comment}{//преобразование вектор-\/строка}}
+\DoxyCodeLine{23 \textcolor{keyword}{public}:}
+\DoxyCodeLine{24     \mbox{\hyperlink{classmodAlphaCipher}{modAlphaCipher}}()=\textcolor{keyword}{delete};\textcolor{comment}{//запретим конструктор без параметров}}
+\DoxyCodeLine{25     \mbox{\hyperlink{classmodAlphaCipher}{modAlphaCipher}}(\textcolor{keyword}{const} std::wstring\& skey);    \textcolor{comment}{//конструктор для установки ключа}}
+\DoxyCodeLine{26     std::wstring encrypt(\textcolor{keyword}{const} std::wstring\& open\_text);  \textcolor{comment}{//зашифрование}}
+\DoxyCodeLine{27     std::wstring decrypt(\textcolor{keyword}{const} std::wstring\& cipher\_text);\textcolor{comment}{//расшифрование}}
+\DoxyCodeLine{28 \};}
+
+\end{DoxyCode}
